@@ -34,4 +34,5 @@ int main() {
 			H += 24;
 		}
 	}
+	return 0;
 }
