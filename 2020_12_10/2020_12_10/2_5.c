@@ -22,8 +22,8 @@ int main() {
 	do {
 		scanf_s("%d %d", &H, &M);
 	} while (H < 0 || H>23 || M < 0 || M>59);
-	
-	
+
+
 	if (M >= 45) {
 		M -= 45;
 	}
@@ -31,9 +31,7 @@ int main() {
 		M = M + 60 - 45;
 		H--;
 		if (H <= 0) {
-			H += 24 ;
+			H += 24;
 		}
 	}
-	printf("%d %d", H, M);
-	return 0;
 }
