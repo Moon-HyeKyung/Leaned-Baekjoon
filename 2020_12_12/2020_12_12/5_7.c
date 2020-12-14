@@ -13,26 +13,30 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define _CRT_SECURE_NO_WARNINGS
 
 int main() {
-	int c, n, sum = 0;
-	int score;
+	int c, n, sum = 0, count = 0;
+	int *score;
+	float avg;
 	scanf_s("%d", &c);
 	for (int i = 0; i < c; i++) {
 		do {
 			scanf_s("%d", &n);
 		} while (n < 1 || n>1000);
-		
+		score = (int*)(malloc(sizeof(int) * n));
 		for (int j = 0; j < n; j++) {
-			scanf_s("%d", &score);
-			if (score < 0 || score > 100) {
+			scanf_s("%d", score + j);
+			if (*(score + j) < 0 || *(score + j) > 100) {
 				j--; continue;
 			}
-			sum += score;
+			sum += *(score + j);
 		}
-		printf("%.3f%\n",(float)sum / n);
+		avg = (float)sum / n;
+		for (int j = 0; j < n; j++) if (*(score + j) > avg) count++;
+		printf("%.3f%% \n", (double)count / n * 100);
 		sum = 0;
+		count = 0;
+		free(score);
 	}
 	return 0;
 }
