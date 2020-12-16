@@ -19,19 +19,19 @@ OX퀴즈의 결과가 주어졌을 때, 점수를 구하는 프로그램을 작성하시오.
 
 int main() {
 	int n, count = 0, sum = 0;
-	char* str;
+	char str[80];
 	scanf_s("%d", &n);
-	str = (char*)(malloc(sizeof(char) * 80));
+	getchar("");
 	for (int i = 0; i < n; i++) {
 		gets(str);
-		for (int i = 0; i < sizeof(*str) / sizeof(char)-1; i++) {
-			if (*(str + i) == 'O' || *(str + i) == 'o') count++;
-			if (*(str + i) == 'X' || *(str + i) == 'x') count = 0;
+		for (int j = 0; j < strlen(str); j++) {
+			if (str[j] == 'O' || str[j] == 'o') count++;
+			if (str[j] == 'X' || str[j] == 'x') count = 0;
 			sum += count;
 		}
 		printf("%d\n", sum);
 		sum = 0;
+		count = 0;
 	}
-	free(str);
 	return 0;
 }
