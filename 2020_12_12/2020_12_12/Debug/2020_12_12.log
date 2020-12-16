@@ -1,2 +1,5 @@
-﻿  5_7.c
+﻿  5_6.c
+D:\페르세우스\BaekJoon_Study\2020_12_12\2020_12_12\5_6.c(24,10): warning C4087: 'getchar': 'void' 매개 변수 목록을 사용하여 선언되었습니다.
+D:\페르세우스\BaekJoon_Study\2020_12_12\2020_12_12\5_6.c(26,7): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\페르세우스\BaekJoon_Study\2020_12_12\2020_12_12\5_6.c(27,29): warning C4013: 'strlen'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
   2020_12_12.vcxproj -> D:\페르세우스\BaekJoon_Study\2020_12_12\Debug\2020_12_12.exe
