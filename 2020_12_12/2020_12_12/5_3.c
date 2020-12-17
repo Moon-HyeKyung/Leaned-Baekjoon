@@ -16,31 +16,28 @@ A °ø B °ø C = 150 °ø 266 °ø 427 = 17037300 ¿Ã µ«∞Ì,
 #include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
 int main() {
-	int a[3], mul, count[9] = { 0 };
+	int a[3], mul, count[10] = { 0 };
 	for (int i = 0; i < 3; i++) {
 		scanf_s("%d", &a[i]);
 		if (a[i] < 100 || a[i] >= 1000) i--;
 	}
 	mul = a[0] * a[1] * a[2];
-	
-	for (int i = 10; ; i*=10) {
-		printf("%d\n", mul % i);
-		switch (mul%i) {
-			case 0: count[0]++; break;
-			case 1: count[1]++; break;
-			case 2: count[2]++; break;
-			case 3: count[3]++; break;
-			case 4: count[4]++; break;
-			case 5: count[5]++; break;
-			case 6: count[6]++; break;
-			case 7: count[7]++; break;
-			default: count[8]++;
+	while (mul != 0) {
+		switch (mul % 10) {
+		case 0: count[0]++; break;
+		case 1: count[1]++; break;
+		case 2: count[2]++; break;
+		case 3: count[3]++; break;
+		case 4: count[4]++; break;
+		case 5: count[5]++; break;
+		case 6: count[6]++; break;
+		case 7: count[7]++; break;
+		case 8: count[8]++; break;
+		case 9: count[9]++; break;
 		}
-		mul /= i;
+		mul /= 10;
 	}
-
-	for(int i=0; i<9; i++)
+	for(int i=0; i<10; i++)
 		printf("%d\n", count[i]);
-
 	return 0;
 }

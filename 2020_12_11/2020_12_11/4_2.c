@@ -14,6 +14,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 int main() {
 	int a, b;
-
+	while(1){
+		scanf_s("%d %d", &a, &b);
+		printf("%d\n", a + b);
+		if (a <= 0 || b >= 10) break;
+	}
 	return 0;
 }
