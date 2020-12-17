@@ -14,24 +14,14 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 int main() {
-	int a[10], remainder[10] = { 0 }, reminder[10] = { 0 }, k = 0;
+	int remain[42] = { 0 }, a, sum=0;
 	for (int i = 0; i < 10; i++) {
-		scanf_s("%d", &a[i]);
-		if (a[i] < 0 || a[i]>1000) {
-			i--;
-			continue;
-		}
-		remainder[i] = a[i] % 42;
+		do {
+			scanf_s("%d", &a);
+		} while (a < 0 || a>1000);
+		remain[a % 42]++;
 	}
-
-	for (int i = 0; i < 10; i++) {
-		for (int j = i + 1; j < 9; j++) {
-			if (remainder[i] == remainder[j])
-				if(reminder[i])
-				reminder[k]=reminder[i];
-		}
-	}
-	printf("%d", count);
-
+	for (int i = 0; i < 42; i++) if (remain[i] != 0) sum++;
+	printf("%d", sum);
 	return 0;
 }
