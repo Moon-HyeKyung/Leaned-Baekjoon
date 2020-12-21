@@ -25,11 +25,10 @@ int main() {
 
 long long sum(int* a, int n) {
 	long long sum = 0;
-	a = (int*)(malloc(sizeof(int) * n));
+	
 	for (int i = 0; i < n; i++) {
 		scanf_s("%d", a + i);
-		if (*(a + i) < 0 || *(a + i) > 1000000) i--;
-		else sum += *(a + i);
+		sum += *(a + i);
 	}
 	return sum;
 }
