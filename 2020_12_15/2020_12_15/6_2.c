@@ -15,7 +15,11 @@ n을 d(n)의 생성자라고 한다. 위의 수열에서 33은 39의 생성자이고, 39는 51의 생성자
 */
 
 #include <stdio.h>
-int 
+int selfNumber(int n) {
+	int sum = n + selfNumber(n/10) + (n % 10);
+
+	return selfNumber(sum);
+}
 int main() {
 	int n;
 	return 0;
