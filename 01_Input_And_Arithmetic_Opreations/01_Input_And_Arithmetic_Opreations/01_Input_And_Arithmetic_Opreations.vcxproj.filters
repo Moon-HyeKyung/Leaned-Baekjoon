@@ -24,5 +24,29 @@
     <ClCompile Include="10171_고양이.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="10172_개.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1000_A+B.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1001_A-B.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10998_AXB.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1008_AB.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10869_사칙연산.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10430_나머지.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2588_곱셈.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
